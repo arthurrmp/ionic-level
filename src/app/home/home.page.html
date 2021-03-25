@@ -1,20 +1,57 @@
-<ion-header [translucent]="true">
+<ion-content forceOverscroll="false">
+
+  <div *ngIf="!motion" class="permissionDiv">
+    <div>
+      <p>Hello! 😃</p>
+      <p>In order to use this PWA, you need to give permission to the accelerometer sensor.</p>
+      <ion-button class="permission">
+        Give Permission
+      </ion-button>
+
+
+      <div class="technologies">
+        <p class="madeWith">Made with</p>
+        <p>
+          <a href="https://angular.io"><ion-icon name="logo-angular" target="_blank"></ion-icon></a>
+          <a href="https://ionicframework.com"><ion-icon name="logo-ionic" target="_blank"></ion-icon></a>
+          <a href="https://capacitorjs.com"><ion-icon name="logo-capacitor" target="_blank"></ion-icon></a>
+        </p>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div *ngIf="motion" class="mainDiv" [style.background-color]="isAligned()? '#2fd058' : 'var(--ion-background-color)'">
+
+    <div class="sphere" [style.mixBlendMode]="isAligned() ? 'unset' : 'difference'"
+      [style.background-color]="isAligned() ? '#2fd058' : 'var(--ion-color-dark)'"
+      [style.--motion-beta]=" motion.beta + 'vh'" [style.--motion-gamma]=" motion.gamma + 'vw'">
+    </div>
+    <div class="mainText" [style.mixBlendMode]="isAligned() ? 'unset' : 'difference'">
+      <!-- [style.--textRotation]="(motion.beta > 0 ? (motion.beta - 90 ) : (motion.beta + 90 )) + 'deg' " -->
+      {{isAligned()? 0 : angle}}°
+    </div>
+    <div class="sphere" [style.border]="isAligned() ? '2px solid var(--ion-color-dark)' : 'none'"
+      [style.mixBlendMode]="isAligned() ? 'unset' : 'difference'"
+      [style.background-color]="isAligned() ? '#2fd058' : 'var(--ion-color-dark)'"
+      [style.--motion-beta]=" ( motion.beta * -1) + 'vh'" [style.--motion-gamma]=" (motion.gamma * -1) + 'vw'">
+    </div>
+  </div>
+
+
+</ion-content>
+
+<ion-footer>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Created by
+      <a class="nickname" href="https://github.com/arthurrmp" target="_blank">
+        arthurrmp
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
     </ion-title>
   </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+</ion-footer>
