@@ -1,5 +1,5 @@
 # ionic-level
-A iOS level app clone made with Angular, Ionic &amp; Capacitor.
+iOS level app clone made with Angular, Ionic &amp; Capacitor.
 
 It uses the Capacitor Motion plugin to track the device orientation.
 
