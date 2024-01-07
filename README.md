@@ -1,9 +1,18 @@
 # ionic-level
-iOS level app clone made with Angular, Ionic &amp; Capacitor.
 
-It uses the Capacitor Motion plugin to track the device orientation.
+This is a basic iOS level application clone developed using **Angular**, **Ionic**, and **Capacitor**. The app leverages the **Capacitor Motion plugin** for device orientation tracking.
 
-<b>Live Example:</b> https://ionic-level.herokuapp.com/
+<b>Live Demo:</b> https://ionic-level.vercel.app
 
 ![App Demonstration](https://media0.giphy.com/media/uXoLKKdqL61gR9ESQI/giphy.gif)
 
+## Installation
+
+1. Install dependencies: `npm install`
+2. Run the app: `ionic serve --external --https`
+   > Note: The `--https` flag is required to use the device orientation API on a real device.
+3. Open the app on your device using the provided URL.
+
+## Contact
+
+If you have any questions or discussions about the project, feel free to contact me.
