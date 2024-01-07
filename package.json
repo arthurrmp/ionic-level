@@ -1,8 +1,8 @@
 {
-  "name": "measure",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "name": "ionic-level",
+  "version": "0.0.2",
+  "author": "Arthur Machado",
+  "homepage": "https://github.com/arthurrmp",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
