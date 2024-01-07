@@ -4,7 +4,7 @@ This is a basic iOS level application clone developed using **Angular**, **Ionic
 
 <b>Live Demo:</b> https://ionic-level.vercel.app
 
-https://github.com/arthurrmp/ionic-level/assets/44805300/8db6c839-26be-4a50-9db2-4c36782f7261
+https://github.com/arthurrmp/ionic-level/assets/44805300/31276244-aa3d-43bb-ab0e-9c44cefa028a
 
 ## Installation
 
