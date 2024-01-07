@@ -1,0 +1,24 @@
+.sphere {
+  transform: translate(
+    calc(var(--motion-gamma) - 50%),
+    calc(var(--motion-beta) - 50%)
+  );
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--ion-color-dark);
+  transition: background-color 0.3s ease 0s;
+}
+
+.mix-blend-difference {
+  mix-blend-mode: difference;
+}
+
+.bordered {
+  border: 2px solid var(--ion-color-dark);
+}
+
+.no-background {
+  background-color: transparent;
+}

@@ -1,65 +1,35 @@
-.sphere {
-  transform: translate(var(--motion-gamma), var(--motion-beta));
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-  mix-blend-mode: difference;
-  box-sizing: border-box;
-  transition: background-color 0.3s ease 0s;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+.success {
+  background-color: var(--ion-color-success);
 }
 
-.mainText {
+.mix-blend-difference {
   mix-blend-mode: difference;
+}
+
+.angle {
+  z-index: 2;
   font-size: 5em;
   position: absolute;
-  z-index: 2;
-  transition: background-color 0.3s ease 0s;
-  color: var(--ion-color-dark);
-  transform: rotate(var(--text-rotation));
 }
 
-.mainDiv {
+.container {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: background-color 0.3s ease 0s;
-  position: fixed;
-
-}
-
-.permissionDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
   text-align: center;
-
-  div {
-    width: 100%;
-  }
 }
 
 .nickname {
   text-decoration: none;
 }
 
-ion-title {
-  padding-inline: 0px;
-}
-
 .technologies {
-  .madeWith {
-    margin-top: 100px;
-  }
+  padding-top: 100px;
+
   ion-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 0 10px;
   }
 }

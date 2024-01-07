@@ -1,41 +1,47 @@
 <ion-content forceOverscroll="false">
-
-  <div *ngIf="!motion" class="permissionDiv">
-    <div>
-      <p>Hello! 😃</p>
-      <p>In order to use this PWA, you need to give permission to the accelerometer sensor.</p>
-      <ion-button id="permission">
-        Give Permission
-      </ion-button>
+  <div class="container" [class.success]="isAligned()">
+    <ng-container *ngIf="!motion">
+      <h1>Ionic Level</h1>
+      <p>
+        In order to use this PWA, you need to give permission to access your
+        device's motion sensor.
+      </p>
+      <ion-button (click)="requestPermission()"> Give Permission </ion-button>
       <div class="technologies">
-        <p class="madeWith">Made with</p>
+        <p>Made with</p>
         <p>
-          <a href="https://angular.io"><ion-icon name="logo-angular" target="_blank"></ion-icon></a>
-          <a href="https://ionicframework.com"><ion-icon name="logo-ionic" target="_blank"></ion-icon></a>
-          <a href="https://capacitorjs.com"><ion-icon name="logo-capacitor" target="_blank"></ion-icon></a>
+          <a
+            *ngFor="let technology of technologies"
+            [href]="technology.link"
+            target="_blank"
+          >
+            <ion-icon [name]="technology.icon" size="large"></ion-icon>
+          </a>
         </p>
       </div>
-    </div>
+    </ng-container>
+    <ng-container *ngIf="motion">
+      <app-sphere
+        [beta]="motion.beta"
+        [gamma]="motion.gamma"
+        [success]="isAligned()"
+      ></app-sphere>
+      <div
+        [class]="{
+          angle: true,
+          'mix-blend-difference': !isAligned()
+        }"
+      >
+        {{isAligned()? 0 : angle}}°
+      </div>
+      <app-sphere
+        [beta]="motion.beta * -1"
+        [gamma]="motion.gamma * -1"
+        [success]="isAligned()"
+        [bordered]="isAligned()"
+      ></app-sphere>
+    </ng-container>
   </div>
-
-  <div *ngIf="motion" class="mainDiv" [style.background-color]="isAligned()? '#2fd058' : 'var(--ion-background-color)'">
-
-    <div class="sphere" [style.mixBlendMode]="isAligned() ? 'unset' : 'difference'"
-      [style.background-color]="isAligned() ? '#2fd058' : 'var(--ion-color-dark)'"
-      [style.--motion-beta]=" motion.beta + 'vh'" [style.--motion-gamma]=" motion.gamma + 'vw'">
-    </div>
-    <div class="mainText" [style.mixBlendMode]="isAligned() ? 'unset' : 'difference'">
-      <!-- [style.--textRotation]="(motion.beta > 0 ? (motion.beta - 90 ) : (motion.beta + 90 )) + 'deg' " -->
-      {{isAligned()? 0 : angle}}°
-    </div>
-    <div class="sphere" [style.border]="isAligned() ? '2px solid var(--ion-color-dark)' : 'none'"
-      [style.mixBlendMode]="isAligned() ? 'unset' : 'difference'"
-      [style.background-color]="isAligned() ? '#2fd058' : 'var(--ion-color-dark)'"
-      [style.--motion-beta]=" ( motion.beta * -1) + 'vh'" [style.--motion-gamma]=" (motion.gamma * -1) + 'vw'">
-    </div>
-  </div>
-
-
 </ion-content>
 
 <ion-footer>
