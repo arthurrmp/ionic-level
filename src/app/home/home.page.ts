@@ -32,7 +32,9 @@ export class HomePage {
 
   async requestPermission() {
     try {
-      await DeviceMotionEvent.requestPermission();
+      await (
+        DeviceOrientationEvent as unknown as DeviceOrientationEventiOS
+      ).requestPermission();
       this.addOrientationListener();
     } catch (e) {
       const alert = await this.alertController.create({
