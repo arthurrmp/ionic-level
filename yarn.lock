@@ -1246,17 +1246,17 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@capacitor/core@^3.0.0-rc.0", "@capacitor/core@3.0.0-rc.0":
-  version "3.0.0-rc.0"
-  resolved "https://registry.npmjs.org/@capacitor/core/-/core-3.0.0-rc.0.tgz"
-  integrity sha512-mg9k9iP+/yZ/uEqnOO+Pqc6Dqlyz98y19gNTP3q5dcUBVizGLaze615jt7xwjRppXlmCm+DMD1lN68ye8gU/dw==
+"@capacitor/core@^5.0.0", "@capacitor/core@^5.6.0":
+  version "5.6.0"
+  resolved "https://registry.npmjs.org/@capacitor/core/-/core-5.6.0.tgz"
+  integrity sha512-xJhCOUGPHw0QYDA3YH+CmL6qiV9DH4Ij3yPxSenymjrtLuXI197u9ddCZwGEwgVIkh9kGZBBKzsNkn89SZ2gdQ==
   dependencies:
     tslib "^2.1.0"
 
-"@capacitor/motion@^0.3.5":
-  version "0.3.5"
-  resolved "https://registry.npmjs.org/@capacitor/motion/-/motion-0.3.5.tgz"
-  integrity sha512-T/yo1HaKvltIW+w1xsbeB5Qzcq0XrYwIVL0DP7kjVnp4TAouTkVDOBd7CgDOX7iEW0WPLBN5NbAXqrT3qmSsVw==
+"@capacitor/motion@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.npmjs.org/@capacitor/motion/-/motion-5.0.6.tgz"
+  integrity sha512-refNzgU58i+IRVRkf8yxDxdjA8XJ8BMGe50HcjAT4TYnYXXIN8z3Kc/NiEIraImWF7sCpV4g68U/B+74DfymRg==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
