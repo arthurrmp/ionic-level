@@ -50,12 +50,10 @@ export class HomePage {
     Motion.addListener('orientation', (event: OrientationListenerEvent) => {
       this.motion = event;
 
-      const { beta, gamma } = event;
+      const gamma = Math.abs(event.gamma);
+      const beta = Math.abs(event.beta);
 
-      this.angle =
-        Math.abs(gamma) >= Math.abs(beta)
-          ? Math.round(gamma)
-          : Math.round(beta);
+      this.angle = -Math.round(Math.max(gamma, beta));
     });
   }
 
