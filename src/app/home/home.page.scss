@@ -2,13 +2,9 @@
   background-color: var(--ion-color-success);
 }
 
-.mix-blend-difference {
-  mix-blend-mode: difference;
-}
-
 .angle {
-  z-index: 2;
-  font-size: 5em;
+  font-size: 4em;
+  font-weight: lighter;
   position: absolute;
 }
 
@@ -20,6 +16,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .nickname {

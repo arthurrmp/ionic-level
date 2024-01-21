@@ -1,4 +1,4 @@
-<ion-content forceOverscroll="false">
+<ion-content [forceOverscroll]="false" [scrollY]="false">
   <div class="container" [class.success]="isAligned()">
     <ng-container *ngIf="!motion">
       <h1>Ionic Level</h1>
@@ -25,21 +25,16 @@
         [beta]="motion.beta"
         [gamma]="motion.gamma"
         [success]="isAligned()"
-      ></app-sphere>
-      <div
-        [class]="{
-          angle: true,
-          'mix-blend-difference': !isAligned()
-        }"
-      >
+      />
+      <div class="angle" [class.mix-blend-difference]="!isAligned()">
         {{isAligned()? 0 : angle}}°
       </div>
       <app-sphere
-        [beta]="motion.beta * -1"
-        [gamma]="motion.gamma * -1"
+        [beta]="-motion.beta"
+        [gamma]="-motion.gamma"
         [success]="isAligned()"
         [bordered]="isAligned()"
-      ></app-sphere>
+      />
     </ng-container>
   </div>
 </ion-content>
