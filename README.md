@@ -9,8 +9,8 @@ https://github.com/arthurrmp/ionic-level/assets/44805300/31276244-aa3d-43bb-ab0e
 ## Installation
 
 1. Install dependencies: `npm install`
-2. Run the app: `ionic serve --external --https`
-   > Note: The `--https` flag is required to use the device orientation API on a real device.
+2. Run the app: `ionic serve --external --ssl`
+   > Note: The `--ssl` flag is required to use the device orientation API on a real device.
 3. Open the app on your device using the provided URL.
 
 ## Contact
